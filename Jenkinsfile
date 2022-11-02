@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Subir a S3') {
             steps {
-                sh 'aws s3 cp static-page s3://bucket-staticpage-lm --recursive' 
+                sh 'aws s3 cp static-page s3://jenkinsbucket-boot --recursive' 
             }
         }
     }

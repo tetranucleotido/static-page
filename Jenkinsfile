@@ -15,7 +15,7 @@ pipeline {
         }
                 stage('Git clone') {
             steps {   
-                sh 'rm -r static-page/'
+                #sh 'rm -r static-page/'
                 sh 'git clone https://github.com/tetranucleotido/static-page.git' 
                 sh 'ls -ls static-page/'
             }

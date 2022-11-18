@@ -14,15 +14,14 @@ pipeline {
             }
         }
                 stage('Git clone') {
-            steps {        
-                sh 'rm -r static-page/'
+            steps {                  
                 sh 'git clone https://github.com/tetranucleotido/static-page.git' 
                 sh 'ls -ls static-page/'
             }
         }
         stage('Subir a S3') {
             steps {
-                sh 'aws s3 cp static-page s3://jenkinsbucket-boot --recursive' 
+                sh 'aws s3 cp static-page s3://jenkins-lm --recursive' 
             }
         }
     }
